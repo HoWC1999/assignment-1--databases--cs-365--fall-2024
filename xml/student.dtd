@@ -1,35 +1,35 @@
 <!-- Root element containing a list of students -->
-<!ELEMENT students (student)+>
+<!ELEMENT students (student)+> <!-- + means one or more -->
 
 <!-- Each student contains name, contact information, academic information, and degree information -->
 <!ELEMENT student (name,contactInformation,academicInformation,degreeInformation)>
 
 <!-- Name contains first name, last name, and preferred name, which are stored as attributes -->
-<!ELEMENT name EMPTY>
+<!ELEMENT name EMPTY> <!-- EMPTY means no children -->
 <!ATTLIST name
-  firstName CDATA #REQUIRED
-  lastName CDATA #REQUIRED
-  preferredName CDATA #IMPLIED>
+  firstName CDATA #REQUIRED <!--First name of student, contains character data, required-->
+  lastName CDATA #REQUIRED <!--Last name of student, contains character data, required-->
+  preferredName CDATA #IMPLIED> <!--Preferred name of student, contains character data, optional-->
 
 <!-- Contact information contains email and phone number, which are stored as attributes -->
-<!ELEMENT contactInformation EMPTY>
+<!ELEMENT contactInformation EMPTY> <!-- EMPTY means no children -->
 <!ATTLIST contactInformation
-  email CDATA #REQUIRED
-  phone CDATA #REQUIRED>
+  email CDATA #REQUIRED <!--Email of student, contains character data, required-->
+  phone CDATA #REQUIRED> <!--Phone number of student, contains character data, required-->
 
 <!-- Academic information contains status, year, GPA, advisor, and student ID, which are stored as attributes -->
-<!ELEMENT academicInformation EMPTY>
+<!ELEMENT academicInformation EMPTY> <!-- EMPTY means no children -->
 <!ATTLIST academicInformation
-  status CDATA #REQUIRED
-  year CDATA #REQUIRED
-  GPA CDATA #REQUIRED
-  advisor CDATA #REQUIRED
-  studentID CDATA #REQUIRED>
+  status CDATA #REQUIRED <!--Academic status of student, contains character data, required-->
+  year CDATA #REQUIRED <!--Academic year of student, contains character data, required-->
+  GPA CDATA #REQUIRED <!--Grade point average of student, contains character data, required-->
+  advisor CDATA #REQUIRED <!--Academic advisor of student, contains character data, required-->
+  studentID CDATA #REQUIRED> <!--Student ID of student, contains character data, required-->
 
 <!-- Degree information contains major, minor, initial enrollment date, and graduation date, which are stored as attributes -->
 <!ELEMENT degreeInformation EMPTY>
 <!ATTLIST degreeInformation
-  major CDATA #REQUIRED
-  minor CDATA #REQUIRED
-  initialEnrollment CDATA #REQUIRED
-  graduationDate CDATA #REQUIRED>
+  major CDATA #REQUIRED <!--Major of student, contains character data, required-->
+  minor CDATA #REQUIRED <!--Minor of student, contains character data, required-->
+  initialEnrollment CDATA #REQUIRED <!--Initial enrollment date of student, contains character data, required-->
+  graduationDate CDATA #REQUIRED> <!--Graduation date of student, contains character data, required-->
