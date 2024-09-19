@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="style.css"?>
-<!DOCTYPE students SYSTEM "student.dtd">
+<?xml-stylesheet type="text/css" href="style.css"?> <!-- Link to external CSS stylesheet -->
+<!DOCTYPE students SYSTEM "student.dtd"> <!-- Link to external DTD file -->
+<!-- The 'students' element is the root element of the XML document -->
 <students>
+  <!-- Each student element represents an individual student -->
   <student>
+    <!-- The 'name' element contains attributes for the student's name -->
     <name firstName="Gordon" lastName="Sumner" preferredName="Sting"/>
+    <!-- The 'contactInformation' element contains attributes for the student's contact information -->
     <contactInformation email="sting@thepolice.com" phone="212.123.4567"/>
+    <!-- The 'academicInformation' element contains attributes for the student's academic information -->
     <academicInformation status="full-time" year="first" GPA="4.0" advisor="Andy Summers" studentID="1234567"/>
+    <!-- The 'degreeInformation' element contains attributes for the student's degree information -->
     <degreeInformation major="Music" minor="English" initialEnrollment="1969-08-25" graduationDate="1973-05-01"/>
   </student>
 

@@ -1,18 +1,23 @@
+<!-- Root element containing a list of students -->
 <!ELEMENT students (student)+>
 
+<!-- Each student contains name, contact information, academic information, and degree information -->
 <!ELEMENT student (name,contactInformation,academicInformation,degreeInformation)>
 
+<!-- Name contains first name, last name, and preferred name, which are stored as attributes -->
 <!ELEMENT name EMPTY>
 <!ATTLIST name
   firstName CDATA #REQUIRED
   lastName CDATA #REQUIRED
   preferredName CDATA #IMPLIED>
 
+<!-- Contact information contains email and phone number, which are stored as attributes -->
 <!ELEMENT contactInformation EMPTY>
 <!ATTLIST contactInformation
   email CDATA #REQUIRED
   phone CDATA #REQUIRED>
 
+<!-- Academic information contains status, year, GPA, advisor, and student ID, which are stored as attributes -->
 <!ELEMENT academicInformation EMPTY>
 <!ATTLIST academicInformation
   status CDATA #REQUIRED
@@ -21,6 +26,7 @@
   advisor CDATA #REQUIRED
   studentID CDATA #REQUIRED>
 
+<!-- Degree information contains major, minor, initial enrollment date, and graduation date, which are stored as attributes -->
 <!ELEMENT degreeInformation EMPTY>
 <!ATTLIST degreeInformation
   major CDATA #REQUIRED
