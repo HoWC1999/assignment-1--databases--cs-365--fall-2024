@@ -1,0 +1,29 @@
+<!ELEMENT students (student)+>
+
+<!ELEMENT student (name,contactInformation,academicInformation,degreeInformation)>
+
+<!ELEMENT name EMPTY>
+<!ATTLIST name
+  firstName CDATA #REQUIRED
+  lastName CDATA #REQUIRED
+  preferredName CDATA #IMPLIED>
+
+<!ELEMENT contactInformation EMPTY>
+<!ATTLIST contactInformation
+  email CDATA #REQUIRED
+  phone CDATA #REQUIRED>
+
+<!ELEMENT academicInformation EMPTY>
+<!ATTLIST academicInformation
+  status CDATA #REQUIRED
+  year CDATA #REQUIRED
+  GPA CDATA #REQUIRED
+  advisor CDATA #REQUIRED
+  studentID CDATA #REQUIRED>
+
+<!ELEMENT degreeInformation EMPTY>
+<!ATTLIST degreeInformation
+  major CDATA #REQUIRED
+  minor CDATA #REQUIRED
+  initialEnrollment CDATA #REQUIRED
+  graduationDate CDATA #REQUIRED>

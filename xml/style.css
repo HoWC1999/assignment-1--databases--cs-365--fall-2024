@@ -1,0 +1,120 @@
+/* Main container for all students */
+students {
+  display: block;
+  margin: 0 auto;
+  max-width: 900px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Each student block */
+student {
+  display: block;
+  margin: 20px 0;
+  padding: 25px;
+  background-color: #ffffff;
+  border-left: 6px solid #4CAF50;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Name section */
+student > name {
+  display: block;
+  font-weight: bold;
+  font-size: 22px;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+/* Display first name, last name, and optional preferred name */
+name::after {
+  content: attr(firstName) " " attr(lastName);
+}
+
+name[preferredName]::after {
+  content: attr(firstName) " " attr(lastName) " (" attr(preferredName) ")";
+}
+
+/* Contact Information Section */
+contactInformation {
+  font-size: 15px;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+contactInformation::before {
+  content: "📧 Contact Information: ";
+  font-weight: bold;
+  color: #4CAF50;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Academic Information Section */
+academicInformation {
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+academicInformation::before {
+  content: "🎓 Academic Information: ";
+  font-weight: bold;
+  color: #4CAF50;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Degree Information Section */
+degreeInformation {
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+degreeInformation::before {
+  content: "📚 Degree Information: ";
+  font-weight: bold;
+  color: #4CAF50;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Specific formatting for each data point under contactInformation */
+contactInformation::after {
+  content: "Email: " attr(email) " | Phone: " attr(phone);
+}
+
+/* Specific formatting for each data point under academicInformation */
+academicInformation::after {
+  content: "Status: " attr(status) " | Year: " attr(year)
+  " | GPA: " attr(GPA) " | Advisor: " attr(advisor) " | Student ID: " attr(studentID);
+}
+
+/* Specific formatting for each data point under degreeInformation */
+degreeInformation::after {
+  content: "Major: " attr(major) " | Minor: " attr(minor)
+  " | Enrollment Date: " attr(initialEnrollment) " | Graduation Date: " attr(graduationDate);
+}
+
+/* Spacing between students */
+student + student {
+  margin-top: 30px;
+}
+
+/* Hover effects */
+student:hover {
+  border-left-color: #45a049;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+name:hover {
+  color: #45a049;
+  transition: color 0.3s ease;
+}
